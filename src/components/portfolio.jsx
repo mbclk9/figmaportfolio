@@ -23,7 +23,7 @@ export default function Portfolio(){
                 <img src={icons.portfolio} alt="" width={40} height={40} />
                 <div className="flex flex-col items-center justify-center gap-3 ">
                     <h5 className="text-secondary font-medium text-sm ">PORTFOLIO</h5>
-                    <h1 className="text-5xl font-medium text-primary  text-center ">Mb9 Visaul Sympony</h1>
+                    <h1 className="text-5xl font-medium text-primary  text-center ">Mb9 Code Sympony</h1>
                 </div>
             </div>
             

@@ -32,8 +32,8 @@ export default function Hero(){
                             <h3 className="max-w-60 text-center font-caveat font-normal text-2xl text-four mx-auto">My style is daringly pushing the boundaries!</h3>
                         </div>
                         <div className="">
-                            <h3 className="text-2xl font-medium text-primary">Helloooo! I m {content.title} ✨</h3>
-                            <p className="max-w-[330px] text-[18px] text-third pt-3"> {content.about} </p>
+                            <h3 className="text-3xl font-medium text-primary">Helloooo! I m {content.title} ✨</h3>
+                            <p className="max-w-[385px] text-[18px] text-third pt-3"> {content.about} </p>
                             <h3 className="text-xl font-medium text-secondary pt-2.5"> {content.title} </h3>
                         </div>
                     </div>

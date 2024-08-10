@@ -30,7 +30,7 @@ export default function Contact(){
                         <img src={avatar} alt="avatar" width={80} height={80} className="rounded-full" />
                         { <img src={icons.arrow}  alt="rightarrow" /> }
                     </div>
-                    <h2 className="font-medium text-[40px] text-primary max-w-[300px] text-left leading-[48px]">Mb9 An Artictic! Tapestry of Creativity</h2>
+                    <h2 className="font-medium text-[40px] text-primary max-w-[300px] text-left leading-[48px]">Mb9 Weaving a Digital Canvas of Innovation!</h2>
                     <h3 className="text-base text-secondary">Muhammet Çelik  •  Frontend Developer</h3>
                 </div>
                 <div className=" flex flex-col flex-grow gap-4 h-fit">

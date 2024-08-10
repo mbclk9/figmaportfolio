@@ -85,10 +85,9 @@ export const Icons=[
 export const Hero_Content= [
     {
         title:"Muhammet Çelik",
-        about:`A frontend developer from Samsun with 3 years of experience. Specializing in Figma, 
-                        I create visually stunning and user-friendly websites. 
-                        My design philosophy focuses on seamless user experiences. 
-                        Check out my portfolio for a glimpse of my work, and lets bring your digital visions to life!`,
+        about:`A frontend developer from Samsun with 3 years of experience. Specializing in front-end development, 
+              I create visually stunning and user-friendly websites. My coding philosophy focuses on seamless user experiences.
+              Check out my portfolio for a glimpse of my work, and let's bring your digital visions to life!"`,
         image:avatar,
     },
 
@@ -97,7 +96,7 @@ export const Hero_Content= [
 export const Counter =[
     {
         title:"PROJECT COMPLETED",
-        number:"48",
+        number:"38",
         
     },
     {
@@ -108,7 +107,7 @@ export const Counter =[
     {
     
         title:"PUBLICATIONS",
-        number:"36"
+        number:"32"
     },
 ]
 
@@ -142,45 +141,41 @@ export const Review =[
         name:"Tom Bekkers",
         role:"Founder • Flowbase ",
         avatar:tomAvatar,
-        description:`Wei Chen's design prowess is unmatched. 
-                    His attention to detail and innovative 
-                    approach have transformed our products 
-                    into sleek, user-centric experiences.`
+        description:`Mr. Celik's development expertise is unparalleled. 
+        His meticulous attention to detail and creative problem-solving have transformed our products into seamless.`
     },
     {
         name:"Barış Çelik",
         role:"Founder • SienK ",
         avatar:barisAvatar,
-        description:`Mr. Celik is a complete visionary designer. 
-                        His ability to translate complex ideas into 
-                        intuitive interfaces has elevated our 
-                        products to new heights.`
+        description:`Mr. Celik is a true visionary developer.
+         His ability to convert complex requirements into efficient, intuitive code has propelled our products to new levels of performance.`
     },
 ]
 
 export const SkillsContent =[
     {
         title:"Problem Solving",
-        description:"Innovative problem-solving and impactful solutions for a better experience.",
-        role:"DESIGN",
+        description:"Innovative solutions and efficient code for tackling complex challenges.",
+        role:"DEVELOPMENT",
         image:problem
     },
     {
         title:"UX Metrics",
-        description:"Data-driven insights for improving user engagement and satisfaction.",
-        role:"RESEARCH",
+        description:"Data-driven enhancements to boost user engagement and satisfaction through code.",
+        role:"DEVELOPMENT",
         image:ux
     },
     {
-        title:"Visual Hierarchy",
-        description:"Compelling visual hierarchy and composition in order to design better.",
+        title:"Intuitive Layouts",
+        description:"Designing clear, user-friendly layouts and smooth navigation for a seamless experience.",
         role:"DESIGN",
         image:visual
     },
     {
-        title:"Design Decisions",
-        description:"Leveraging valuable data insights to make informed design decisions.",
-        role:"RESEARCH",
+        title:"Development Choices",
+        description:"Applying valuable insights to make strategic and effective coding decisions.",
+        role:"DEVELOPMENT",
         image:creavity
     },
 ]
