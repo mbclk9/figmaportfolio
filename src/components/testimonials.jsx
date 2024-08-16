@@ -1,8 +1,8 @@
 import { Review } from "../constans"
 import { Icons } from "../constans"
 import { getIconByName } from "../utils/getIcon"
-
-
+import { motion,useInView } from "framer-motion"
+import { useRef } from "react"
 
 export default function Testimonials(){
 
@@ -15,8 +15,17 @@ export default function Testimonials(){
         return acc;
     }, {});
 
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true }); 
+    
     return(
-        <div className="flex flex-col items-center justify-center py-12 px-8 gap-12">
+        <motion.div 
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}} 
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex flex-col items-center justify-center py-12 px-8 gap-12">
             
             <div  className=" items-center justify-center flex flex-col gap-4 ">
                 <img  src={icons.testimonials} alt="" width={40} height={40} />
@@ -42,6 +51,6 @@ export default function Testimonials(){
                 </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     )
 }

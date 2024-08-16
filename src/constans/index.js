@@ -1,4 +1,4 @@
-import avatar from "../assets/images/avatar.png"
+import avatar from "../assets/images/baris.jpg"
 import twitter from "../assets/icons/socialmedia/xx.svg"
 import dribble from "../assets/icons/socialmedia/dribbble.svg"
 import instagram from "../assets/icons/socialmedia/instagram.svg"
@@ -17,7 +17,7 @@ import creavity from "../assets/icons/skills/creavity.svg"
 import problem from "../assets/icons/skills/problem.svg"
 import ux from "..//assets/icons/skills/ux.svg"
 import visual from "../assets/icons/skills/visual.svg"
-import chat from "../assets/icons/toolsicon/chat.svg"
+import slack from "../assets/icons/toolsicon/chat.svg"
 import figma from "../assets/icons/toolsicon/figma.svg"
 import framer from "../assets/icons/toolsicon/framer.svg"
 import photoshop from "../assets/icons/toolsicon/photoshop.svg"
@@ -58,7 +58,7 @@ export const Icons=[
     {
         category:'tools',
         icons:{
-            chat:chat,
+            slack:slack,
             figma:figma,
             framer:framer,
             photoshop:photoshop,
@@ -102,7 +102,7 @@ export const Counter =[
     {
         
         title:"CLIENTS CONTACTED",
-        number:"99+"
+        number:"99"
     },
     {
     

@@ -16,7 +16,7 @@ export default {
         secondary:'#525252',
         third:'#858585',
         four:'#848484',
-        neon:'#D6FF30'
+        goldenrod:'#EECA00'
         
       },
     },

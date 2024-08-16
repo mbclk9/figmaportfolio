@@ -2,9 +2,34 @@ import { Hero_Content } from "../constans"
 import { Counter } from "../constans"
 import { Icons } from "../constans"
 import { getIconByName } from "../utils/getIcon"
+import { useEffect, useState } from "react"
+import { motion} from "framer-motion"
+
 
 export default function Hero(){
 
+    const [counts, setCounts] = useState(Counter.map(() => 0));
+
+    useEffect(() => {
+      Counter.forEach((content, index) => {
+        const targetNumber = content.number;
+        let startNumber = 0;
+  
+        const interval = setInterval(() => {
+          startNumber += Math.ceil(targetNumber / 100); // Her adımda artış miktarı
+          if (startNumber >= targetNumber) {
+            clearInterval(interval);
+            startNumber = targetNumber;
+          }
+  
+          setCounts(prevCounts => {
+            const newCounts = [...prevCounts];
+            newCounts[index] = startNumber;
+            return newCounts;
+          });
+        }, 20); // Artış hızı
+      });
+    }, []);
 
     const iconNames = [
         { category: 'general', name: 'about' },
@@ -27,10 +52,13 @@ export default function Hero(){
             </div>
             {Hero_Content.map((content,index) => (
                     <div key={index} className="flex  items-center  mx-auto gap-8 ">
-                        <div className=" bg-backgroundtwo p-3 rounded-3xl items-center justify-center ">
-                            <img src={content.image} alt="avatar" />
-                            <h3 className="max-w-60 text-center font-caveat font-normal text-2xl text-four mx-auto">My style is daringly pushing the boundaries!</h3>
-                        </div>
+                        <motion.div
+                        whileHover={{rotate:4 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        className=" bg-backgroundtwo p-3 rounded-3xl items-center justify-center cursor-pointer  ">
+                            <img src={content.image} alt="avatar"  className="rounded-xl w-[296px]" />
+                            <h3 className="max-w-60 text-center font-caveat font-normal text-2xl text-four mx-auto">My style is all about daring to defy conventions!</h3>
+                        </motion.div>
                         <div className="">
                             <h3 className="text-3xl font-medium text-primary">Helloooo! I m {content.title} ✨</h3>
                             <p className="max-w-[385px] text-[18px] text-third pt-3"> {content.about} </p>
@@ -43,7 +71,13 @@ export default function Hero(){
 
                 <div key={index} className={`flex flex-col flex-grow items-center text-center gap-2  ${index !== Counter.length - 1 ? 'border-r-2 border-[#292929]' : ''}`}>
                     <h3 className="font-medium text-sm text-third">{content.title}  </h3>
-                    <span className="font-medium text-5xl text-primary">{content.number}</span>
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 2 }}
+                        className="font-medium text-5xl text-primary">
+                          {counts[index]}
+                        </motion.span>
                 </div>
                 ))}
            

@@ -1,6 +1,8 @@
 import { Icons } from "../constans"
 import { getIconByName } from "../utils/getIcon"
 import { SkillsContent } from "../constans";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function Skills(){
 
@@ -15,9 +17,16 @@ export default function Skills(){
         return acc;
     } ,{});
 
-
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true }); 
+    
     return(
-        <div className="flex flex-col items-center justify-center py-12 px-8 gap-12">
+        <motion.div 
+        ref={ref}
+        initial={{opacity:0 , y:50}}
+        animate={isInView ? {opacity:1, y:0} : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex flex-col items-center justify-center py-12 px-8 gap-12">
             <div  className=" items-center justify-center flex flex-col gap-4 ">
                 <img src={icons.skills} alt="" width={40} height={40} />
                 <div className="flex flex-col items-center justify-center gap-3 ">
@@ -42,6 +51,6 @@ export default function Skills(){
                 </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     )
 }
